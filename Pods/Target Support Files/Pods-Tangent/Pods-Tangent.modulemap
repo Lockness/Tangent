@@ -1,0 +1,6 @@
+framework module Pods_Tangent {
+  umbrella header "Pods-Tangent-umbrella.h"
+
+  export *
+  module * { export * }
+}
