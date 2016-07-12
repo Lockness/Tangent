@@ -26,7 +26,7 @@ class SignUpViewController: UIViewController {
             if let error = error {
                 print(error.localizedDescription)
             } else {
-                print("User created")
+                self.performSegueWithIdentifier("toMainViewController", sender: self)
             }
             
         })
