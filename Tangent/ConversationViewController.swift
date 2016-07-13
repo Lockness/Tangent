@@ -32,8 +32,4 @@ class ConversationViewController: UIViewController {
         }
     }
     
-    @IBAction func unwindToConversationViewController(segue: UIStoryboardSegue) {
-        print("unwind")
-    }
-    
 }
