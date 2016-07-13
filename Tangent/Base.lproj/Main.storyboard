@@ -36,8 +36,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1k8-2u-mad">
-                                <rect key="frame" x="277" y="343" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1k8-2u-mad">
+                                <rect key="frame" x="225.5" y="323" width="149" height="30"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
                                     <action selector="handleLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="plV-6X-8xh"/>
@@ -101,7 +101,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.95999999999999996" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nA2-uA-WKU" firstAttribute="centerX" secondItem="Ous-qu-p0D" secondAttribute="centerX" id="3hW-DE-8Xj"/>
                             <constraint firstItem="nA2-uA-WKU" firstAttribute="centerY" secondItem="Ous-qu-p0D" secondAttribute="centerY" id="XdF-w2-FVj"/>
@@ -196,7 +196,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="zTy-8E-wez">
                                         <rect key="frame" x="0.0" y="192" width="500" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPl-rO-gyc">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPl-rO-gyc">
                                                 <rect key="frame" x="0.0" y="0.0" width="107" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -246,22 +246,25 @@
             </objects>
             <point key="canvasLocation" x="997" y="773"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Message Table View Controller-->
         <scene sceneID="Y0f-1U-9vG">
             <objects>
-                <tableViewController id="DoC-lp-qey" sceneMemberID="viewController">
+                <tableViewController id="DoC-lp-qey" customClass="MessageTableViewController" customModule="Tangent" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="n1Q-pk-0SI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qGX-EB-elT">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Default" id="qGX-EB-elT">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qGX-EB-elT" id="hcz-Y9-ght">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="X5v-nU-5yc" kind="show" identifier="showConversation" id="HJp-gz-uQn"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -274,6 +277,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2z-ys-NGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2626" y="410"/>
+        </scene>
+        <!--Conversation View Controller-->
+        <scene sceneID="XBG-iH-oHK">
+            <objects>
+                <viewController id="X5v-nU-5yc" customClass="ConversationViewController" customModule="Tangent" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zi9-zz-8co"/>
+                        <viewControllerLayoutGuide type="bottom" id="3gQ-lQ-3NQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KOW-we-czZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conversation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0b-8z-dfY">
+                                <rect key="frame" x="249.5" y="289.5" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A0b-8z-dfY" firstAttribute="centerX" secondItem="KOW-we-czZ" secondAttribute="centerX" id="Csu-GB-beA"/>
+                            <constraint firstItem="A0b-8z-dfY" firstAttribute="centerY" secondItem="KOW-we-czZ" secondAttribute="centerY" id="Qns-IG-ZtR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FoO-f9-cPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3482" y="410"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c1N-Xr-Wjs">
