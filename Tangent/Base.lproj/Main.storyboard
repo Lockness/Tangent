@@ -196,7 +196,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="zTy-8E-wez">
                                         <rect key="frame" x="0.0" y="192" width="500" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPl-rO-gyc">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPl-rO-gyc">
                                                 <rect key="frame" x="0.0" y="0.0" width="107" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -278,6 +278,34 @@
             </objects>
             <point key="canvasLocation" x="2626" y="410"/>
         </scene>
+        <!--Branches View Controller-->
+        <scene sceneID="1OS-n9-Grj">
+            <objects>
+                <viewController id="Q1r-RH-6bE" customClass="BranchesViewController" customModule="Tangent" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fEa-8I-5tX"/>
+                        <viewControllerLayoutGuide type="bottom" id="zVP-4u-Ugm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sJS-83-2Nj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aU7-g7-c4C">
+                                <rect key="frame" x="26" y="72" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="Nik-IB-Vql" kind="unwind" unwindAction="unwindToConversationViewController:" id="3M0-RJ-5eE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1f6-RQ-Hlk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Nik-IB-Vql" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3482" y="-305"/>
+        </scene>
         <!--Conversation View Controller-->
         <scene sceneID="XBG-iH-oHK">
             <objects>
@@ -303,6 +331,9 @@
                             <constraint firstItem="A0b-8z-dfY" firstAttribute="centerY" secondItem="KOW-we-czZ" secondAttribute="centerY" id="Qns-IG-ZtR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="Q1r-RH-6bE" kind="show" identifier="showBranches" id="BGR-Xj-Udb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FoO-f9-cPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
