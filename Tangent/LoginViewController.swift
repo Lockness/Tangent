@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
                 print(error.localizedDescription)
                 return
             }
-            self.performSegueWithIdentifier("toMainViewController", sender: self)
+            self.performSegueWithIdentifier("toMessageTableView", sender: self)
 
             
         })

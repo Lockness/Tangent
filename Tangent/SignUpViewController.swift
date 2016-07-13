@@ -26,7 +26,7 @@ class SignUpViewController: UIViewController {
             if let error = error {
                 print(error.localizedDescription)
             } else {
-                self.performSegueWithIdentifier("toMainViewController", sender: self)
+                self.performSegueWithIdentifier("toMessageTableView", sender: self)
             }
             
         })
