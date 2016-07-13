@@ -20,6 +20,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func handleSignUp(sender: AnyObject) {
+        
+        
+        
         FIRAuth.auth()?.createUserWithEmail(emailField.text!, password: passwordField.text!, completion: {
             user, error in
             
@@ -36,8 +39,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         guard let email = emailField.text,
             let confirmEmail = confirmEmailField.text else { return }
         
-        print(email)
-        print(confirmEmail)
         if email != confirmEmail {
             confirmEmailField.textColor = UIColor.redColor()
         } else {
@@ -46,11 +47,22 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    func confirmValidEmail(textField: UITextField) -> Bool {
+        guard let email = textField.text else { return true }
+        
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        print(emailTest.evaluateWithObject(email) && email[email.startIndex] != ".")
+        return emailTest.evaluateWithObject(email) && email[email.startIndex] != "."
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.confirmEmailField.addTarget(self, action: #selector(SignUpViewController.confirmEmailAddress(_:)), forControlEvents: UIControlEvents.EditingChanged)
         self.emailField.addTarget(self, action: #selector(SignUpViewController.confirmEmailAddress(_:)),
-            forControlEvents: UIControlEvents.EditingChanged)
+            forControlEvents: UIControlEvents.EditingDidEnd)
+        self.emailField.addTarget(self, action: #selector(SignUpViewController.confirmValidEmail(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
         
     }
     
