@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		161F623B1D1504D000706543 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 161F623A1D1504D000706543 /* GoogleService-Info.plist */; };
 		163C769A1D35EDB80065E726 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C76991D35EDB80065E726 /* MessageTableViewController.swift */; };
+		163C76A21D369AB20065E726 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C76A11D369AB20065E726 /* Message.swift */; };
+		163C76A41D369B350065E726 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C76A31D369B350065E726 /* Conversation.swift */; };
+		163C76A61D369B6A0065E726 /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C76A51D369B6A0065E726 /* Branch.swift */; };
+		163C76A81D369C260065E726 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C76A71D369C260065E726 /* ConversationViewController.swift */; };
 		16786A481D3559FC00BD86BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16786A471D3559FC00BD86BF /* LoginViewController.swift */; };
 		16786A4A1D355A0500BD86BF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16786A491D355A0500BD86BF /* SignUpViewController.swift */; };
 		16786A4F1D35838200BD86BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16786A4D1D35838200BD86BF /* Main.storyboard */; };
@@ -23,6 +27,10 @@
 		14DAE3F608EFC66E146AC9E6 /* Pods-Tangent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tangent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tangent/Pods-Tangent.debug.xcconfig"; sourceTree = "<group>"; };
 		161F623A1D1504D000706543 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		163C76991D35EDB80065E726 /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
+		163C76A11D369AB20065E726 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		163C76A31D369B350065E726 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		163C76A51D369B6A0065E726 /* Branch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
+		163C76A71D369C260065E726 /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		16786A471D3559FC00BD86BF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		16786A491D355A0500BD86BF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		16786A4E1D35838200BD86BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,6 +56,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		163C769F1D369A8F0065E726 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				163C76A11D369AB20065E726 /* Message.swift */,
+				163C76A31D369B350065E726 /* Conversation.swift */,
+				163C76A51D369B6A0065E726 /* Branch.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		163C76A01D369A9A0065E726 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D48F4EC51D14AA720080C485 /* FirstScreenViewController.swift */,
+				16786A471D3559FC00BD86BF /* LoginViewController.swift */,
+				16786A491D355A0500BD86BF /* SignUpViewController.swift */,
+				163C76991D35EDB80065E726 /* MessageTableViewController.swift */,
+				163C76A71D369C260065E726 /* ConversationViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		163C76A91D369DA50065E726 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D48F4EC31D14AA720080C485 /* AppDelegate.swift */,
+				16786A4D1D35838200BD86BF /* Main.storyboard */,
+				161F623A1D1504D000706543 /* GoogleService-Info.plist */,
+				D48F4ECA1D14AA720080C485 /* Assets.xcassets */,
+				D48F4ECC1D14AA720080C485 /* LaunchScreen.storyboard */,
+				D48F4ECF1D14AA720080C485 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		1C322D9718BF6A6C75B198A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,16 +129,9 @@
 		D48F4EC21D14AA720080C485 /* Tangent */ = {
 			isa = PBXGroup;
 			children = (
-				D48F4EC31D14AA720080C485 /* AppDelegate.swift */,
-				D48F4EC51D14AA720080C485 /* FirstScreenViewController.swift */,
-				16786A471D3559FC00BD86BF /* LoginViewController.swift */,
-				16786A4D1D35838200BD86BF /* Main.storyboard */,
-				16786A491D355A0500BD86BF /* SignUpViewController.swift */,
-				163C76991D35EDB80065E726 /* MessageTableViewController.swift */,
-				161F623A1D1504D000706543 /* GoogleService-Info.plist */,
-				D48F4ECA1D14AA720080C485 /* Assets.xcassets */,
-				D48F4ECC1D14AA720080C485 /* LaunchScreen.storyboard */,
-				D48F4ECF1D14AA720080C485 /* Info.plist */,
+				163C769F1D369A8F0065E726 /* Models */,
+				163C76A91D369DA50065E726 /* Supporting Files */,
+				163C76A01D369A9A0065E726 /* View Controllers */,
 			);
 			path = Tangent;
 			sourceTree = "<group>";
@@ -135,6 +171,7 @@
 				TargetAttributes = {
 					D48F4EBF1D14AA720080C485 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = VYQ93YPW29;
 					};
 				};
 			};
@@ -223,11 +260,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				163C76A41D369B350065E726 /* Conversation.swift in Sources */,
+				163C76A61D369B6A0065E726 /* Branch.swift in Sources */,
+				163C76A81D369C260065E726 /* ConversationViewController.swift in Sources */,
 				16786A481D3559FC00BD86BF /* LoginViewController.swift in Sources */,
 				D48F4EC61D14AA720080C485 /* FirstScreenViewController.swift in Sources */,
 				16786A4A1D355A0500BD86BF /* SignUpViewController.swift in Sources */,
 				D48F4EC41D14AA720080C485 /* AppDelegate.swift in Sources */,
 				163C769A1D35EDB80065E726 /* MessageTableViewController.swift in Sources */,
+				163C76A21D369AB20065E726 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,10 +382,13 @@
 			baseConfigurationReference = 14DAE3F608EFC66E146AC9E6 /* Pods-Tangent.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Tangent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lockness.Tangent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -353,10 +397,13 @@
 			baseConfigurationReference = B6BCA3124DC1A1E11685B4F5 /* Pods-Tangent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Tangent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lockness.Tangent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
