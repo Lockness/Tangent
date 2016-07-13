@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var firstNameField: UITextField!
     @IBOutlet var lastNameField: UITextField!
@@ -32,8 +32,25 @@ class SignUpViewController: UIViewController {
         })
     }
     
+    func confirmEmailAddress(textField: UITextField) {
+        guard let email = emailField.text,
+            let confirmEmail = confirmEmailField.text else { return }
+        
+        print(email)
+        print(confirmEmail)
+        if email != confirmEmail {
+            confirmEmailField.textColor = UIColor.redColor()
+        } else {
+            confirmEmailField.textColor = UIColor.blackColor()
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.confirmEmailField.addTarget(self, action: #selector(SignUpViewController.confirmEmailAddress(_:)), forControlEvents: UIControlEvents.EditingChanged)
+        self.emailField.addTarget(self, action: #selector(SignUpViewController.confirmEmailAddress(_:)),
+            forControlEvents: UIControlEvents.EditingChanged)
         
     }
     
