@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class MessageTableViewController: UITableViewController {
+class ConversationTableViewController: UITableViewController {
     
    // var messageRef = FIRDatabase.database().reference()
     //var user: FIRUser?
