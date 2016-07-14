@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConversationViewController: UIViewController {
+class ConversationViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var conversation: Conversation!
     
@@ -16,8 +16,8 @@ class ConversationViewController: UIViewController {
         super.viewDidLoad()
         
         let screenEdgeRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(didSwipeFromTop))
-        screenEdgeRecognizer.edges = .Top
-        
+        screenEdgeRecognizer.edges = .Right
+        screenEdgeRecognizer.delegate = self
         view.addGestureRecognizer(screenEdgeRecognizer)
     }
     
