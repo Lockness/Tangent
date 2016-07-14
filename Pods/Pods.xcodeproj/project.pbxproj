@@ -7,63 +7,152 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		55C652992BDDD3487D73791C132AD0EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		82BFD9765571074FDAAB8EB4194E2604 /* Pods-Tangent-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 08878D1670B4EA1C055A6B0ED84477C0 /* Pods-Tangent-dummy.m */; };
-		84A8D799A3647F63C25DC0DE4B41968E /* Pods-Tangent-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6917CF0A18D0A638D1FD5C96788BAA46 /* Pods-Tangent-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22F036D477F781A131B304BBE647BBA5 /* Pods-Tangent-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 08878D1670B4EA1C055A6B0ED84477C0 /* Pods-Tangent-dummy.m */; };
+		566DCCBC92CC05EA7779A9ECE5CE9883 /* Navajo-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B063E1C1DF00A5ECAF86995E15C73816 /* Navajo-Swift-dummy.m */; };
+		589616104EA8CFAF3936D8E69517192B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		5ED561D9797D5D6D2D3FB0ED99385B56 /* Navajo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159A25E1000F2A49B203EDC563462D21 /* Navajo.swift */; };
+		6E52FEA091259451C86CF182078A05E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		76446134F32F28589D3260EA5396C413 /* Navajo-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E9191DC68E7D5A01F972477B61B244 /* Navajo-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		974FB38AE110C04E44BB88F434F846E0 /* NJOPasswordRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CB535F935D86B417420F77606F8E0 /* NJOPasswordRule.swift */; };
+		C77AAC582B72D7F2ED5B3AA1B72F4CA7 /* NJOPasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97E00F1F1621A05E3163FD7095C68F0 /* NJOPasswordValidator.swift */; };
+		CF60530462BDE220DFF779FF2772C259 /* Pods-Tangent-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6917CF0A18D0A638D1FD5C96788BAA46 /* Pods-Tangent-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		185DFB18AABE9A063F27978C088A011D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C29EBAF4C872CEB0FF7DDD9FEF5EFEB7;
+			remoteInfo = "Navajo-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		03E0106265A217ACC218EA2235104FBF /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Headers/Public/FIRInstanceID.h; sourceTree = "<group>"; };
+		05D6112F04D357F54764ADF4359E3C62 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
 		08395527FD4780BD49840B89D4EE7670 /* Pods-Tangent-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tangent-frameworks.sh"; sourceTree = "<group>"; };
 		08878D1670B4EA1C055A6B0ED84477C0 /* Pods-Tangent-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tangent-dummy.m"; sourceTree = "<group>"; };
-		1892758E67449AE41C1A85972B9C94D6 /* Pods_Tangent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tangent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		159A25E1000F2A49B203EDC563462D21 /* Navajo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Navajo.swift; path = Source/Navajo.swift; sourceTree = "<group>"; };
 		1FB02AB009BEB6A5D3337018A5CBEBA1 /* Pods-Tangent-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tangent-acknowledgements.markdown"; sourceTree = "<group>"; };
-		452405C82F8A0076FA037F9AC0719782 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
-		4761F87CFBF739E2A4D75031E7F2BDB7 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
-		488DE80D15C6E1716EB07B210B2CA8A6 /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Frameworks/FirebaseAuth.framework; sourceTree = "<group>"; };
+		3E77F9A611A1B39AFC4EF44613C0D8A2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47492800D5DD7E851795E03E8E1085C7 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
 		48DD3FB0B97CC3A13562FFDD3F8A1C8D /* Pods-Tangent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tangent.release.xcconfig"; sourceTree = "<group>"; };
-		55D3EB9CC2466094DD973029676A2472 /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = Frameworks/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
+		494EE0735E69A8825A800875EC906154 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Headers/Public/FIRInstanceID.h; sourceTree = "<group>"; };
+		54811CB6F2EDBB824107E3C44BDD7F79 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
 		578ED5E7873D0691A0A5F95D8A86BE0E /* Pods-Tangent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tangent.debug.xcconfig"; sourceTree = "<group>"; };
-		67BAE9A776C3F88B932EF65D29360537 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		60E5B8584A82AB227A98FD02332D2D41 /* Navajo_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Navajo_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64EF825B16CEF97D20777861A5EB1B11 /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = Frameworks/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
 		6917CF0A18D0A638D1FD5C96788BAA46 /* Pods-Tangent-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tangent-umbrella.h"; sourceTree = "<group>"; };
 		6E54783F63BE5C1A2354D50055ACB974 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		789CC823EA9D4F0478B6B312D7874F20 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		70290B9711CC0402B507D70C0575F185 /* Pods_Tangent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tangent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72B7588ACA2E352A7D142D00E1E0FC5B /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Headers/Firebase.h; sourceTree = "<group>"; };
+		7BAD15A7B82217B39E5C01BAE515F486 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		91294F1F3D1ABC1D39EF0C907FCB7F3B /* Navajo-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Navajo-Swift.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9734309B2592AB55CAFD926C42A07EE9 /* Pods-Tangent-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tangent-resources.sh"; sourceTree = "<group>"; };
 		AADC820B589D76F2F6031C42EBAF618C /* Pods-Tangent-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tangent-acknowledgements.plist"; sourceTree = "<group>"; };
+		B063E1C1DF00A5ECAF86995E15C73816 /* Navajo-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Navajo-Swift-dummy.m"; sourceTree = "<group>"; };
+		B0E9191DC68E7D5A01F972477B61B244 /* Navajo-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Navajo-Swift-umbrella.h"; sourceTree = "<group>"; };
+		C84E56EE12B6CAC877DB0353A1181F3D /* Navajo-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Navajo-Swift-prefix.pch"; sourceTree = "<group>"; };
+		CAE0631D897816FD99588B8ABACE47EA /* Navajo-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Navajo-Swift.modulemap"; sourceTree = "<group>"; };
+		CE9CB535F935D86B417420F77606F8E0 /* NJOPasswordRule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NJOPasswordRule.swift; path = Source/NJOPasswordRule.swift; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D15E0597A3F922F3644090B7FDD8EB0C /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		D3BD44DC9C90CF974ED682B59997B92F /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAuth.framework; path = Frameworks/FirebaseAuth.framework; sourceTree = "<group>"; };
+		D97E00F1F1621A05E3163FD7095C68F0 /* NJOPasswordValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NJOPasswordValidator.swift; path = Source/NJOPasswordValidator.swift; sourceTree = "<group>"; };
 		E021AA3BA30FC96D828013C395FC06B2 /* Pods-Tangent.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Tangent.modulemap"; sourceTree = "<group>"; };
-		E3E116E374CFF4017AEEFE6E8EBC3026 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Headers/Firebase.h; sourceTree = "<group>"; };
-		EB7A564D36A7D9E62CD7CDA67B579F51 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
-		F847ABE6512B2018E8ED69364605DE26 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
+		F9318A019AA5040699A23318C46DD87D /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FDD13DD962DD031AF054C121F020B335 /* Frameworks */ = {
+		4A83B86AC2D4B3C181D08C8153C239DC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55C652992BDDD3487D73791C132AD0EC /* Foundation.framework in Frameworks */,
+				6E52FEA091259451C86CF182078A05E2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F708AD665E0189EE5E2DFF6029D7EB63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				589616104EA8CFAF3936D8E69517192B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2C31E0233017FB1BFBCB33F7354A2D22 /* GoogleUtilities */ = {
+		1E663CA5D16CAE96407C25F84303E8D2 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D281E91283F793E8CA75412349F48963 /* Frameworks */,
+				3E77F9A611A1B39AFC4EF44613C0D8A2 /* Info.plist */,
+				CAE0631D897816FD99588B8ABACE47EA /* Navajo-Swift.modulemap */,
+				91294F1F3D1ABC1D39EF0C907FCB7F3B /* Navajo-Swift.xcconfig */,
+				B063E1C1DF00A5ECAF86995E15C73816 /* Navajo-Swift-dummy.m */,
+				C84E56EE12B6CAC877DB0353A1181F3D /* Navajo-Swift-prefix.pch */,
+				B0E9191DC68E7D5A01F972477B61B244 /* Navajo-Swift-umbrella.h */,
 			);
-			path = GoogleUtilities;
+			name = "Support Files";
+			path = "../Target Support Files/Navajo-Swift";
 			sourceTree = "<group>";
 		};
-		3CD7E1E23ECF34FDF931C0381F479D8C /* GoogleSymbolUtilities */ = {
+		21197775544177FDB1E5D3B29CD8BC21 /* GoogleNetworkingUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				46A8763392E22D8E8B274B0E2D7D1550 /* Frameworks */,
+				3C757EF696AC286DABF15F4574E0AB5F /* Frameworks */,
+			);
+			path = GoogleNetworkingUtilities;
+			sourceTree = "<group>";
+		};
+		2776283DFF4A50C192A3A547BC3277C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9318A019AA5040699A23318C46DD87D /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A5ACF2774FD42E3B0A63257816B27F4 /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				DC1202676EA6F35C17F74C7FFD2C91D9 /* Frameworks */,
+			);
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		2B47C16598556A54DB3BA1CFC35DAE0F /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				987EC87A7C71F8943CD9C82981C121F1 /* Frameworks */,
 			);
 			path = GoogleSymbolUtilities;
+			sourceTree = "<group>";
+		};
+		38BA37CDCB30495F090F49950DE678CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4EB2D7E3661B5BE40BD1ED6C50A56D96 /* Firebase */,
+				53BC2D02905D467181BF5747ECB6145D /* FirebaseAnalytics */,
+				B10C0844BCD05E63C068EA67B742A7FE /* FirebaseAuth */,
+				8997DAB64F92AAE5AFE0E8CF1B669B7F /* FirebaseDatabase */,
+				F7AF9496EFF0488222B5608816130BB0 /* FirebaseInstanceID */,
+				2A5ACF2774FD42E3B0A63257816B27F4 /* GoogleInterchangeUtilities */,
+				21197775544177FDB1E5D3B29CD8BC21 /* GoogleNetworkingUtilities */,
+				2B47C16598556A54DB3BA1CFC35DAE0F /* GoogleSymbolUtilities */,
+				7630759DA5B894BFFD4659FA6540C291 /* GoogleUtilities */,
+				7EF8CFE5F20DB7EEF01EC2BEE269158D /* Navajo-Swift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3C757EF696AC286DABF15F4574E0AB5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64EF825B16CEF97D20777861A5EB1B11 /* GoogleNetworkingUtilities.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
@@ -74,69 +163,53 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		46A8763392E22D8E8B274B0E2D7D1550 /* Frameworks */ = {
+		49E7838F7961DCFD92D863B90EE49DF6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4761F87CFBF739E2A4D75031E7F2BDB7 /* GoogleSymbolUtilities.framework */,
+				60E5B8584A82AB227A98FD02332D2D41 /* Navajo_Swift.framework */,
+				70290B9711CC0402B507D70C0575F185 /* Pods_Tangent.framework */,
 			);
-			name = Frameworks;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		5C70F7225A55D654CC45856840D1C7EA /* Firebase */ = {
+		4EB2D7E3661B5BE40BD1ED6C50A56D96 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				CF52A66801ACB66144CBA1E6EBEE70D9 /* Analytics */,
+				531DA98766979DD4446447C800D05F59 /* Analytics */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
 		};
-		6926ECF7C779A470DCBC96D030CC6A83 /* FirebaseAnalytics */ = {
+		531DA98766979DD4446447C800D05F59 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
-				B003E44AF39A073FF0DCBF62A6DB2BF0 /* Frameworks */,
+				72B7588ACA2E352A7D142D00E1E0FC5B /* Firebase.h */,
+			);
+			name = Analytics;
+			sourceTree = "<group>";
+		};
+		53BC2D02905D467181BF5747ECB6145D /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				ACA5D0C855A9DA9CC48EB8687AF826D6 /* Frameworks */,
 			);
 			path = FirebaseAnalytics;
 			sourceTree = "<group>";
 		};
-		6A7093A972E338FDCB1503327A5A108F /* Frameworks */ = {
+		631D42D8F060AA47AEDFF1702B0319E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				67BAE9A776C3F88B932EF65D29360537 /* FirebaseDatabase.framework */,
+				7BAD15A7B82217B39E5C01BAE515F486 /* FirebaseDatabase.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6DDD0181EC31EBBDC09435AF0A624F8D /* FirebaseInstanceID */ = {
+		7630759DA5B894BFFD4659FA6540C291 /* GoogleUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				03E0106265A217ACC218EA2235104FBF /* FIRInstanceID.h */,
-				7928D8E4AF7DDB04EA7796A15D1A1F95 /* Frameworks */,
+				8E2518CF52E35EF33FCA2BFCA34B2DE8 /* Frameworks */,
 			);
-			path = FirebaseInstanceID;
-			sourceTree = "<group>";
-		};
-		6E9F397AE79C26FBE9C8767EB7C6BF89 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5C70F7225A55D654CC45856840D1C7EA /* Firebase */,
-				6926ECF7C779A470DCBC96D030CC6A83 /* FirebaseAnalytics */,
-				B975A4AA5B5C2F4A8E3D75B69E5E97DB /* FirebaseAuth */,
-				72FF4AA34B51053F6345C9700A854DCB /* FirebaseDatabase */,
-				6DDD0181EC31EBBDC09435AF0A624F8D /* FirebaseInstanceID */,
-				DBFFACE7C9ED8EC5C7CC42F190190BC4 /* GoogleInterchangeUtilities */,
-				A14C6E4BB4CB955E28A2A2AA42AF62F7 /* GoogleNetworkingUtilities */,
-				3CD7E1E23ECF34FDF931C0381F479D8C /* GoogleSymbolUtilities */,
-				2C31E0233017FB1BFBCB33F7354A2D22 /* GoogleUtilities */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		72FF4AA34B51053F6345C9700A854DCB /* FirebaseDatabase */ = {
-			isa = PBXGroup;
-			children = (
-				6A7093A972E338FDCB1503327A5A108F /* Frameworks */,
-			);
-			path = FirebaseDatabase;
+			path = GoogleUtilities;
 			sourceTree = "<group>";
 		};
 		79167A7FF550AAB6248B2C9E5B099AE9 /* Pods-Tangent */ = {
@@ -157,23 +230,26 @@
 			path = "Target Support Files/Pods-Tangent";
 			sourceTree = "<group>";
 		};
-		7928D8E4AF7DDB04EA7796A15D1A1F95 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				452405C82F8A0076FA037F9AC0719782 /* FirebaseInstanceID.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				6E9F397AE79C26FBE9C8767EB7C6BF89 /* Pods */,
-				975440A445DC41BFE262B5CE61D8B185 /* Products */,
+				38BA37CDCB30495F090F49950DE678CA /* Pods */,
+				49E7838F7961DCFD92D863B90EE49DF6 /* Products */,
 				810BF2199C2A453458C6D25BE5D9BE8F /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		7EF8CFE5F20DB7EEF01EC2BEE269158D /* Navajo-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				159A25E1000F2A49B203EDC563462D21 /* Navajo.swift */,
+				CE9CB535F935D86B417420F77606F8E0 /* NJOPasswordRule.swift */,
+				D97E00F1F1621A05E3163FD7095C68F0 /* NJOPasswordValidator.swift */,
+				1E663CA5D16CAE96407C25F84303E8D2 /* Support Files */,
+			);
+			path = "Navajo-Swift";
 			sourceTree = "<group>";
 		};
 		810BF2199C2A453458C6D25BE5D9BE8F /* Targets Support Files */ = {
@@ -184,58 +260,42 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		975440A445DC41BFE262B5CE61D8B185 /* Products */ = {
+		8997DAB64F92AAE5AFE0E8CF1B669B7F /* FirebaseDatabase */ = {
 			isa = PBXGroup;
 			children = (
-				1892758E67449AE41C1A85972B9C94D6 /* Pods_Tangent.framework */,
+				631D42D8F060AA47AEDFF1702B0319E4 /* Frameworks */,
 			);
-			name = Products;
+			path = FirebaseDatabase;
 			sourceTree = "<group>";
 		};
-		A14C6E4BB4CB955E28A2A2AA42AF62F7 /* GoogleNetworkingUtilities */ = {
+		8E2518CF52E35EF33FCA2BFCA34B2DE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A81D21B5302AB8375EEFBF24421919DF /* Frameworks */,
-			);
-			path = GoogleNetworkingUtilities;
-			sourceTree = "<group>";
-		};
-		A6E49B499546589686E163EECC8085DF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EB7A564D36A7D9E62CD7CDA67B579F51 /* GoogleInterchangeUtilities.framework */,
+				47492800D5DD7E851795E03E8E1085C7 /* GoogleUtilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A81D21B5302AB8375EEFBF24421919DF /* Frameworks */ = {
+		987EC87A7C71F8943CD9C82981C121F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				55D3EB9CC2466094DD973029676A2472 /* GoogleNetworkingUtilities.framework */,
+				05D6112F04D357F54764ADF4359E3C62 /* GoogleSymbolUtilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B003E44AF39A073FF0DCBF62A6DB2BF0 /* Frameworks */ = {
+		ACA5D0C855A9DA9CC48EB8687AF826D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				789CC823EA9D4F0478B6B312D7874F20 /* FirebaseAnalytics.framework */,
+				D15E0597A3F922F3644090B7FDD8EB0C /* FirebaseAnalytics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B54925C679C8221ED7BC98F242741EE4 /* Frameworks */ = {
+		B10C0844BCD05E63C068EA67B742A7FE /* FirebaseAuth */ = {
 			isa = PBXGroup;
 			children = (
-				488DE80D15C6E1716EB07B210B2CA8A6 /* FirebaseAuth.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B975A4AA5B5C2F4A8E3D75B69E5E97DB /* FirebaseAuth */ = {
-			isa = PBXGroup;
-			children = (
-				B54925C679C8221ED7BC98F242741EE4 /* Frameworks */,
+				C90EBF42F3686AC381FB4840152F3574 /* Frameworks */,
 			);
 			path = FirebaseAuth;
 			sourceTree = "<group>";
@@ -248,59 +308,86 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CF52A66801ACB66144CBA1E6EBEE70D9 /* Analytics */ = {
+		C90EBF42F3686AC381FB4840152F3574 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E3E116E374CFF4017AEEFE6E8EBC3026 /* Firebase.h */,
-			);
-			name = Analytics;
-			sourceTree = "<group>";
-		};
-		D281E91283F793E8CA75412349F48963 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F847ABE6512B2018E8ED69364605DE26 /* GoogleUtilities.framework */,
+				D3BD44DC9C90CF974ED682B59997B92F /* FirebaseAuth.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DBFFACE7C9ED8EC5C7CC42F190190BC4 /* GoogleInterchangeUtilities */ = {
+		DC1202676EA6F35C17F74C7FFD2C91D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A6E49B499546589686E163EECC8085DF /* Frameworks */,
+				54811CB6F2EDBB824107E3C44BDD7F79 /* GoogleInterchangeUtilities.framework */,
 			);
-			path = GoogleInterchangeUtilities;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7AF9496EFF0488222B5608816130BB0 /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				494EE0735E69A8825A800875EC906154 /* FIRInstanceID.h */,
+				2776283DFF4A50C192A3A547BC3277C9 /* Frameworks */,
+			);
+			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		B4F04235334EE31959A299B8369A280E /* Headers */ = {
+		583A815EC8ECF440695A1E6F738BA50A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84A8D799A3647F63C25DC0DE4B41968E /* Pods-Tangent-umbrella.h in Headers */,
+				76446134F32F28589D3260EA5396C413 /* Navajo-Swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C06928A812577BEB927D5550337B303A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF60530462BDE220DFF779FF2772C259 /* Pods-Tangent-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		995BAF5FAC8958D402AFF4B07EBDACAF /* Pods-Tangent */ = {
+		706BAF5FAD0AC9D497DF09BD630E7FAA /* Pods-Tangent */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E403F96C10A92469B88624300DDE9601 /* Build configuration list for PBXNativeTarget "Pods-Tangent" */;
+			buildConfigurationList = CCEA6483C8DE2F3E6116620A8C475B88 /* Build configuration list for PBXNativeTarget "Pods-Tangent" */;
 			buildPhases = (
-				1AF8F10B3E281BAD8A56FA5B8948296D /* Sources */,
-				FDD13DD962DD031AF054C121F020B335 /* Frameworks */,
-				B4F04235334EE31959A299B8369A280E /* Headers */,
+				D291F01C8907B6F6B5CC893CDB77B24C /* Sources */,
+				F708AD665E0189EE5E2DFF6029D7EB63 /* Frameworks */,
+				C06928A812577BEB927D5550337B303A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				415D4DC178376982CBC6A2475A709E84 /* PBXTargetDependency */,
+			);
+			name = "Pods-Tangent";
+			productName = "Pods-Tangent";
+			productReference = 70290B9711CC0402B507D70C0575F185 /* Pods_Tangent.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C29EBAF4C872CEB0FF7DDD9FEF5EFEB7 /* Navajo-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 982166A7C8F7A8DD7A6FB895ACCF0FDC /* Build configuration list for PBXNativeTarget "Navajo-Swift" */;
+			buildPhases = (
+				E106A4E576C2AE5C6E6157EC9C9C64ED /* Sources */,
+				4A83B86AC2D4B3C181D08C8153C239DC /* Frameworks */,
+				583A815EC8ECF440695A1E6F738BA50A /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-Tangent";
-			productName = "Pods-Tangent";
-			productReference = 1892758E67449AE41C1A85972B9C94D6 /* Pods_Tangent.framework */;
+			name = "Navajo-Swift";
+			productName = "Navajo-Swift";
+			productReference = 60E5B8584A82AB227A98FD02332D2D41 /* Navajo_Swift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -311,11 +398,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					995BAF5FAC8958D402AFF4B07EBDACAF = {
-						DevelopmentTeam = VYQ93YPW29;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -325,27 +407,81 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 975440A445DC41BFE262B5CE61D8B185 /* Products */;
+			productRefGroup = 49E7838F7961DCFD92D863B90EE49DF6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				995BAF5FAC8958D402AFF4B07EBDACAF /* Pods-Tangent */,
+				C29EBAF4C872CEB0FF7DDD9FEF5EFEB7 /* Navajo-Swift */,
+				706BAF5FAD0AC9D497DF09BD630E7FAA /* Pods-Tangent */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1AF8F10B3E281BAD8A56FA5B8948296D /* Sources */ = {
+		D291F01C8907B6F6B5CC893CDB77B24C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82BFD9765571074FDAAB8EB4194E2604 /* Pods-Tangent-dummy.m in Sources */,
+				22F036D477F781A131B304BBE647BBA5 /* Pods-Tangent-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E106A4E576C2AE5C6E6157EC9C9C64ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				566DCCBC92CC05EA7779A9ECE5CE9883 /* Navajo-Swift-dummy.m in Sources */,
+				5ED561D9797D5D6D2D3FB0ED99385B56 /* Navajo.swift in Sources */,
+				974FB38AE110C04E44BB88F434F846E0 /* NJOPasswordRule.swift in Sources */,
+				C77AAC582B72D7F2ED5B3AA1B72F4CA7 /* NJOPasswordValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		415D4DC178376982CBC6A2475A709E84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Navajo-Swift";
+			target = C29EBAF4C872CEB0FF7DDD9FEF5EFEB7 /* Navajo-Swift */;
+			targetProxy = 185DFB18AABE9A063F27978C088A011D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		136B8C3F8E0E5986246B8BA5AC1802DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48DD3FB0B97CC3A13562FFDD3F8A1C8D /* Pods-Tangent.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Tangent/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tangent/Pods-Tangent.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Tangent;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		3FA451D268613890FA8A5A03801E11D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -384,40 +520,34 @@
 			};
 			name = Release;
 		};
-		3FE808D76BF5FF45A379C4DC397E73C0 /* Debug */ = {
+		409CFC39D01C5C933BE6C426C664232E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 578ED5E7873D0691A0A5F95D8A86BE0E /* Pods-Tangent.debug.xcconfig */;
+			baseConfigurationReference = 91294F1F3D1ABC1D39EF0C907FCB7F3B /* Navajo-Swift.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Tangent/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Navajo-Swift/Navajo-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Navajo-Swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Tangent/Pods-Tangent.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Tangent;
-				PROVISIONING_PROFILE = "";
+				MODULEMAP_FILE = "Target Support Files/Navajo-Swift/Navajo-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Navajo_Swift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -461,14 +591,43 @@
 			};
 			name = Debug;
 		};
-		E3C564EC298C82BE1F762B3F1A7E80E2 /* Release */ = {
+		6E543BF64352F8B862456F195D6D4630 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48DD3FB0B97CC3A13562FFDD3F8A1C8D /* Pods-Tangent.release.xcconfig */;
+			baseConfigurationReference = 91294F1F3D1ABC1D39EF0C907FCB7F3B /* Navajo-Swift.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Navajo-Swift/Navajo-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Navajo-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Navajo-Swift/Navajo-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Navajo_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		94EF6401C5B16E66637E00FD297F9DD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 578ED5E7873D0691A0A5F95D8A86BE0E /* Pods-Tangent.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -481,20 +640,20 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Tangent/Pods-Tangent.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_Tangent;
-				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -508,11 +667,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E403F96C10A92469B88624300DDE9601 /* Build configuration list for PBXNativeTarget "Pods-Tangent" */ = {
+		982166A7C8F7A8DD7A6FB895ACCF0FDC /* Build configuration list for PBXNativeTarget "Navajo-Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3FE808D76BF5FF45A379C4DC397E73C0 /* Debug */,
-				E3C564EC298C82BE1F762B3F1A7E80E2 /* Release */,
+				6E543BF64352F8B862456F195D6D4630 /* Debug */,
+				409CFC39D01C5C933BE6C426C664232E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCEA6483C8DE2F3E6116620A8C475B88 /* Build configuration list for PBXNativeTarget "Pods-Tangent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94EF6401C5B16E66637E00FD297F9DD2 /* Debug */,
+				136B8C3F8E0E5986246B8BA5AC1802DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

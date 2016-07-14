@@ -6,9 +6,9 @@ target 'Tangent' do
   use_frameworks!
 
   # Pods for Tangent
-
 pod 'Firebase'
 pod 'Firebase/Database'
 pod 'Firebase/Auth'
+pod 'Navajo-Swift'
 
 end

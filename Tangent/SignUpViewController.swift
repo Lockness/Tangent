@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import Navajo_Swift
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
     
@@ -16,12 +17,17 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var lastNameField: UITextField!
     @IBOutlet var emailField: UITextField!
     @IBOutlet var confirmEmailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet var passwordField: UITextField!
     
+    var validPassword: Bool = false
+    var validEmail: Bool = false
+    var confirmedEmail: Bool = false
     
     @IBAction func handleSignUp(sender: AnyObject) {
-        
-        
+        validateFields()
+        if (!validPassword || !validEmail || !confirmedEmail) {
+            return
+        }
         
         FIRAuth.auth()?.createUserWithEmail(emailField.text!, password: passwordField.text!, completion: {
             user, error in
@@ -29,46 +35,72 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             if let error = error {
                 print(error.localizedDescription)
             } else {
-                self.performSegueWithIdentifier("toMessageTableView", sender: self)
+                self.performSegueWithIdentifier("toConversationTableView", sender: self)
             }
             
         })
     }
     
-    func confirmEmailAddress(textField: UITextField) {
-        guard let email = emailField.text,
-            let confirmEmail = confirmEmailField.text else { return }
+    func validateFields() {
+        validPassword = confirmValidPassword(inField: passwordField)
+        validEmail = confirmValidEmail(inField: emailField)
+        confirmedEmail = confirmEmailAddress(Field: emailField, isSameAs: confirmEmailField)
+    }
+    
+    func confirmValidEmail(inField textField: UITextField) -> Bool {
+        guard let email = textField.text else { return false }
+        
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        
+        return emailTest.evaluateWithObject(email) && email[email.startIndex] != "."
+    }
+    
+    
+    func confirmEmailAddress(Field textField: UITextField, isSameAs secondTextField: UITextField) -> Bool {
+        guard let email = textField.text,
+              let confirmEmail = secondTextField.text else { return false }
         
         if email != confirmEmail {
-            confirmEmailField.textColor = UIColor.redColor()
-        } else {
-            confirmEmailField.textColor = UIColor.blackColor()
+            return false
         }
+        return true
         
     }
     
-    func confirmValidEmail(textField: UITextField) -> Bool {
-        guard let email = textField.text else { return true }
+    func changeConfirmEmailColor(textField: UITextField) {
+        if confirmEmailAddress(Field: textField, isSameAs: emailField) == true {
+            confirmEmailField.textColor = UIColor.blackColor()
+        } else {
+            confirmEmailField.textColor = UIColor.redColor()
+        }
+    }
+    
+    func confirmValidPassword(inField textfield: UITextField) -> Bool {
+        guard let password = passwordField.text else { return false }
         
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        var lengthRule = NJOLengthRule(min: 6, max: 15)
+        var uppercaseRule = NJORequiredCharacterRule(preset: .LowercaseCharacter)
+        var numberRule = NJORequiredCharacterRule(preset: .DecimalDigitCharacter)
+        var validator = NJOPasswordValidator(rules: [lengthRule, uppercaseRule, numberRule])
         
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        print(emailTest.evaluateWithObject(email) && email[email.startIndex] != ".")
-        return emailTest.evaluateWithObject(email) && email[email.startIndex] != "."
+        var failingRules = validator.validatePassword(password)
+        
+        if failingRules != nil {
+            return false
+        }
+        
+        return true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.confirmEmailField.addTarget(self, action: #selector(SignUpViewController.confirmEmailAddress(_:)), forControlEvents: UIControlEvents.EditingChanged)
-        self.emailField.addTarget(self, action: #selector(SignUpViewController.confirmEmailAddress(_:)),
-            forControlEvents: UIControlEvents.EditingDidEnd)
-        self.emailField.addTarget(self, action: #selector(SignUpViewController.confirmValidEmail(_:)), forControlEvents: UIControlEvents.EditingDidEnd)
-        
+        view.backgroundColor = UIColor.init(white: 0.9 as CGFloat, alpha: 1 as CGFloat)
+        self.confirmEmailField.addTarget(self, action: #selector(SignUpViewController.changeConfirmEmailColor(_:)), forControlEvents: UIControlEvents.EditingChanged)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
     
     

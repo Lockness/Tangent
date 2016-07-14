@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class MessageTableViewController: UITableViewController {
+    
+   // var messageRef = FIRDatabase.database().reference()
+    //var user: FIRUser?
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
