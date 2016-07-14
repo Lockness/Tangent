@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class LoginViewController: UIViewController, UIAlertViewDelegate {
+class LoginViewController: UIViewController, UIAlertViewDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -25,22 +25,48 @@ class LoginViewController: UIViewController, UIAlertViewDelegate {
                 self.presentViewController(alert, animated: true, completion: nil)
                 return
             }
-            self.performSegueWithIdentifier("toMessageTableView", sender: self)
-
             
+            //perform segue inside the closure so that it only runs if login was successful
+            self.performSegueWithIdentifier("toConversationTableView", sender: self)
         })
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        view.backgroundColor = UIColor.init(white: 0.9 as CGFloat, alpha: 1 as CGFloat)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let navController = segue.destinationViewController as! UINavigationController
+        let conversationTableViewController = navController.topViewController as! ConversationTableViewController
+//        messageView.user = user
     }
 
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if let id = textField.restorationIdentifier {
+            if id == "emailField" {
+                passwordField.becomeFirstResponder()
+            } else if id == "passwordField" {
+                passwordField.resignFirstResponder()
+            }
+        } else {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+    
+    @IBAction func backgroundWasTapped(sender: AnyObject) {
+        view.endEditing(true)
+    }
 
 }
 
