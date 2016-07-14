@@ -45,11 +45,6 @@ class LoginViewController: UIViewController, UIAlertViewDelegate, UITextFieldDel
         super.didReceiveMemoryWarning()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let navController = segue.destinationViewController as! UINavigationController
-        let conversationTableViewController = navController.topViewController as! ConversationTableViewController
-//        messageView.user = user
-    }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         if let id = textField.restorationIdentifier {

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		161F623B1D1504D000706543 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 161F623A1D1504D000706543 /* GoogleService-Info.plist */; };
 		163C769A1D35EDB80065E726 /* ConversationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C76991D35EDB80065E726 /* ConversationTableViewController.swift */; };
 		163C76A21D369AB20065E726 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C76A11D369AB20065E726 /* Message.swift */; };
 		163C76A41D369B350065E726 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C76A31D369B350065E726 /* Conversation.swift */; };
@@ -22,11 +21,11 @@
 		D48F4EC61D14AA720080C485 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48F4EC51D14AA720080C485 /* FirstScreenViewController.swift */; };
 		D48F4ECB1D14AA720080C485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48F4ECA1D14AA720080C485 /* Assets.xcassets */; };
 		D48F4ECE1D14AA720080C485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48F4ECC1D14AA720080C485 /* LaunchScreen.storyboard */; };
+		D49BB6AB1D3845AE006DB76B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D49BB6AA1D3845AE006DB76B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		14DAE3F608EFC66E146AC9E6 /* Pods-Tangent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tangent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tangent/Pods-Tangent.debug.xcconfig"; sourceTree = "<group>"; };
-		161F623A1D1504D000706543 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		163C76991D35EDB80065E726 /* ConversationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTableViewController.swift; sourceTree = "<group>"; };
 		163C76A11D369AB20065E726 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		163C76A31D369B350065E726 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
@@ -44,6 +43,7 @@
 		D48F4ECA1D14AA720080C485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D48F4ECD1D14AA720080C485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D48F4ECF1D14AA720080C485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D49BB6AA1D3845AE006DB76B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +86,7 @@
 			children = (
 				D48F4EC31D14AA720080C485 /* AppDelegate.swift */,
 				16786A4D1D35838200BD86BF /* Main.storyboard */,
-				161F623A1D1504D000706543 /* GoogleService-Info.plist */,
+				D49BB6AA1D3845AE006DB76B /* GoogleService-Info.plist */,
 				D48F4ECA1D14AA720080C485 /* Assets.xcassets */,
 				D48F4ECC1D14AA720080C485 /* LaunchScreen.storyboard */,
 				D48F4ECF1D14AA720080C485 /* Info.plist */,
@@ -202,7 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D48F4ECE1D14AA720080C485 /* LaunchScreen.storyboard in Resources */,
-				161F623B1D1504D000706543 /* GoogleService-Info.plist in Resources */,
+				D49BB6AB1D3845AE006DB76B /* GoogleService-Info.plist in Resources */,
 				D48F4ECB1D14AA720080C485 /* Assets.xcassets in Resources */,
 				16786A4F1D35838200BD86BF /* Main.storyboard in Resources */,
 			);
