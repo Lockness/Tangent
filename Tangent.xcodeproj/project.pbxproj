@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		161F623B1D1504D000706543 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 161F623A1D1504D000706543 /* GoogleService-Info.plist */; };
-		163C769A1D35EDB80065E726 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C76991D35EDB80065E726 /* MessageTableViewController.swift */; };
+		163C769A1D35EDB80065E726 /* ConversationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C76991D35EDB80065E726 /* ConversationTableViewController.swift */; };
 		163C76A21D369AB20065E726 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C76A11D369AB20065E726 /* Message.swift */; };
 		163C76A41D369B350065E726 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C76A31D369B350065E726 /* Conversation.swift */; };
 		163C76A61D369B6A0065E726 /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163C76A51D369B6A0065E726 /* Branch.swift */; };
@@ -27,7 +27,7 @@
 /* Begin PBXFileReference section */
 		14DAE3F608EFC66E146AC9E6 /* Pods-Tangent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tangent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tangent/Pods-Tangent.debug.xcconfig"; sourceTree = "<group>"; };
 		161F623A1D1504D000706543 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		163C76991D35EDB80065E726 /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
+		163C76991D35EDB80065E726 /* ConversationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTableViewController.swift; sourceTree = "<group>"; };
 		163C76A11D369AB20065E726 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		163C76A31D369B350065E726 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		163C76A51D369B6A0065E726 /* Branch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 				D48F4EC51D14AA720080C485 /* FirstScreenViewController.swift */,
 				16786A471D3559FC00BD86BF /* LoginViewController.swift */,
 				16786A491D355A0500BD86BF /* SignUpViewController.swift */,
-				163C76991D35EDB80065E726 /* MessageTableViewController.swift */,
+				163C76991D35EDB80065E726 /* ConversationTableViewController.swift */,
 				163C76A71D369C260065E726 /* ConversationViewController.swift */,
 				163C76AA1D36AFF30065E726 /* BranchesViewController.swift */,
 			);
@@ -271,7 +271,7 @@
 				D48F4EC61D14AA720080C485 /* FirstScreenViewController.swift in Sources */,
 				16786A4A1D355A0500BD86BF /* SignUpViewController.swift in Sources */,
 				D48F4EC41D14AA720080C485 /* AppDelegate.swift in Sources */,
-				163C769A1D35EDB80065E726 /* MessageTableViewController.swift in Sources */,
+				163C769A1D35EDB80065E726 /* ConversationTableViewController.swift in Sources */,
 				163C76A21D369AB20065E726 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
