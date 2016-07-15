@@ -17,13 +17,14 @@ class ConversationViewController: UIViewController, UIGestureRecognizerDelegate 
         
         let screenEdgeRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(didSwipeFromTop))
         screenEdgeRecognizer.edges = .Right
-        screenEdgeRecognizer.delegate = self
         view.addGestureRecognizer(screenEdgeRecognizer)
     }
     
     func didSwipeFromTop(recognizer: UIScreenEdgePanGestureRecognizer) {
         print("touched")
-        self.performSegueWithIdentifier("showBranches", sender: self)
+        if recognizer.state == .Recognized {
+            self.performSegueWithIdentifier("showBranches", sender: self)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
