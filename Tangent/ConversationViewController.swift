@@ -18,6 +18,7 @@ class ConversationViewController: UIViewController, UIGestureRecognizerDelegate 
         let screenEdgeRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(didSwipeFromTop))
         screenEdgeRecognizer.edges = .Right
         view.addGestureRecognizer(screenEdgeRecognizer)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     func didSwipeFromTop(recognizer: UIScreenEdgePanGestureRecognizer) {

@@ -16,6 +16,7 @@
 		16786A481D3559FC00BD86BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16786A471D3559FC00BD86BF /* LoginViewController.swift */; };
 		16786A4A1D355A0500BD86BF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16786A491D355A0500BD86BF /* SignUpViewController.swift */; };
 		16786A4F1D35838200BD86BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16786A4D1D35838200BD86BF /* Main.storyboard */; };
+		16E43E011D3ACB0F0055FE3D /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E43E001D3ACB0F0055FE3D /* UserProfileViewController.swift */; };
 		6CB732819ADE8166FBD7DB78 /* Pods_Tangent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C3ACE76EC452502F42E7B8 /* Pods_Tangent.framework */; };
 		D48F4EC41D14AA720080C485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48F4EC31D14AA720080C485 /* AppDelegate.swift */; };
 		D48F4EC61D14AA720080C485 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48F4EC51D14AA720080C485 /* FirstScreenViewController.swift */; };
@@ -35,6 +36,7 @@
 		16786A471D3559FC00BD86BF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		16786A491D355A0500BD86BF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		16786A4E1D35838200BD86BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		16E43E001D3ACB0F0055FE3D /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		77C3ACE76EC452502F42E7B8 /* Pods_Tangent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tangent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6BCA3124DC1A1E11685B4F5 /* Pods-Tangent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tangent.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tangent/Pods-Tangent.release.xcconfig"; sourceTree = "<group>"; };
 		D48F4EC01D14AA720080C485 /* Tangent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tangent.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +79,7 @@
 				163C76991D35EDB80065E726 /* ConversationTableViewController.swift */,
 				163C76A71D369C260065E726 /* ConversationViewController.swift */,
 				163C76AA1D36AFF30065E726 /* BranchesViewController.swift */,
+				16E43E001D3ACB0F0055FE3D /* UserProfileViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				16786A4A1D355A0500BD86BF /* SignUpViewController.swift in Sources */,
 				D48F4EC41D14AA720080C485 /* AppDelegate.swift in Sources */,
 				163C769A1D35EDB80065E726 /* ConversationTableViewController.swift in Sources */,
+				16E43E011D3ACB0F0055FE3D /* UserProfileViewController.swift in Sources */,
 				163C76A21D369AB20065E726 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

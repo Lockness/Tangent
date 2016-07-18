@@ -30,7 +30,7 @@ class ConversationTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Loaded")
+        self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
     }
     
     override func viewWillAppear(animated: Bool) {
