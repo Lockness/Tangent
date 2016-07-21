@@ -298,7 +298,7 @@
             </objects>
             <point key="canvasLocation" x="997" y="773"/>
         </scene>
-        <!--Title-->
+        <!--Conversations-->
         <scene sceneID="Y0f-1U-9vG">
             <objects>
                 <tableViewController id="DoC-lp-qey" customClass="ConversationTableViewController" customModule="Tangent" customModuleProvider="target" sceneMemberID="viewController">
@@ -324,7 +324,7 @@
                             <outlet property="delegate" destination="DoC-lp-qey" id="egN-KE-5Kd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="nF8-Pq-OZs">
+                    <navigationItem key="navigationItem" title="Conversations" id="nF8-Pq-OZs">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="Nt0-8o-Ifx">
                             <connections>
                                 <segue destination="GeU-7h-Prn" kind="show" id="ay0-Ln-dXO"/>
@@ -336,7 +336,7 @@
             </objects>
             <point key="canvasLocation" x="1736" y="410"/>
         </scene>
-        <!--Title-->
+        <!--Branches-->
         <scene sceneID="1OS-n9-Grj">
             <objects>
                 <viewController id="Q1r-RH-6bE" customClass="BranchesViewController" customModule="Tangent" customModuleProvider="target" sceneMemberID="viewController">
@@ -350,7 +350,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="TPu-Up-WQ4">
+                    <navigationItem key="navigationItem" title="Branches" id="TPu-Up-WQ4">
                         <barButtonItem key="rightBarButtonItem" title="Setting" id="SnK-Bh-hzK">
                             <connections>
                                 <segue destination="GeU-7h-Prn" kind="show" id="BXZ-EC-apf"/>
@@ -427,6 +427,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="VXf-HA-vZZ"/>
-        <segue reference="BXZ-EC-apf"/>
+        <segue reference="YmP-1E-MXb"/>
     </inferredMetricsTieBreakers>
 </document>
