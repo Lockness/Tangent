@@ -27,7 +27,7 @@ class LoginViewController: UIViewController, UIAlertViewDelegate, UITextFieldDel
         }
     }
     
-    func showActivityIndicatory(uiView: UIView) {
+    func showActivityIndicator(uiView: UIView) {
         container.frame = uiView.frame
         container.center = uiView.center
         container.backgroundColor = UIColor(white: 0xffffff, alpha: 0.3)
@@ -52,7 +52,8 @@ class LoginViewController: UIViewController, UIAlertViewDelegate, UITextFieldDel
     
     @IBAction func handleLogin(sender: AnyObject) {
         loginButton.enabled = false
-        showActivityIndicatory(self.view)
+        loginButton.alpha = 1.0
+        showActivityIndicator(self.view)
         FIRAuth.auth()?.signInWithEmail(emailField.text!, password: passwordField.text!, completion: {
             user, error in
             if let error = error { //If error isn't nil, then login didn't work
@@ -70,6 +71,8 @@ class LoginViewController: UIViewController, UIAlertViewDelegate, UITextFieldDel
             //perform segue inside the closure so that it only runs if login was successful
             self.performSegueWithIdentifier("toConversationTableView", sender: self)
             self.actInd.stopAnimating()
+            self.loadingView.removeFromSuperview()
+            self.container.removeFromSuperview()
         })
     }
 
