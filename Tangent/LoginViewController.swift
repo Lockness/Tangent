@@ -16,6 +16,13 @@ class LoginViewController: UIViewController, UIAlertViewDelegate, UITextFieldDel
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet var loginButton: UIButton!
     
+    var firebase = FIRDatabase.database().reference()
+    var userRef: FIRDatabaseReference {
+        get {
+            return self.firebase.child("Users")
+        }
+    }
+    
     @IBAction func handleLogin(sender: AnyObject) {
         loginButton.enabled = false
         FIRAuth.auth()?.signInWithEmail(emailField.text!, password: passwordField.text!, completion: {
@@ -29,7 +36,9 @@ class LoginViewController: UIViewController, UIAlertViewDelegate, UITextFieldDel
                 return
             }
             
+            self.firebase.child("Users").child(user!.uid).child("email").setValue("jtcruthers@gmail.com")
             //perform segue inside the closure so that it only runs if login was successful
+            
             self.performSegueWithIdentifier("toConversationTableView", sender: self)
         })
     }

@@ -12,8 +12,9 @@ import FirebaseAuth
 
 class ConversationTableViewController: UITableViewController {
     
-   // var messageRef = FIRDatabase.database().reference()
+    var messageRef = FIRDatabase.database().reference().child("Branches/B1/Messages")
     //var user: FIRUser?
+    
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -24,13 +25,19 @@ class ConversationTableViewController: UITableViewController {
         
         cell.textLabel?.text = "conversation number \(indexPath.row)"
 
+
         
         return cell
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
+        
+        _ = messageRef.observeEventType(FIRDataEventType.ChildAdded, withBlock: { (snapshot) in
+            print(snapshot.key)
+            // ...
+        })
+        
     }
     
     override func viewWillAppear(animated: Bool) {
