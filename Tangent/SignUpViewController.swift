@@ -26,6 +26,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func handleSignUp(sender: AnyObject) {
         self.signUpButton.enabled = false
+        self.signUpButton.alpha = 1.0
         validateFields()
         
         if (!validPassword || !validEmail || !confirmedEmail) {

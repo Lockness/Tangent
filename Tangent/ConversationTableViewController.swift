@@ -13,20 +13,22 @@ import FirebaseAuth
 class ConversationTableViewController: UITableViewController {
     
     var messageRef = FIRDatabase.database().reference().child("Branches/B1/Messages")
+    var userRef = FIRAuth.auth()
     //var user: FIRUser?
     
+    @IBAction func logout(sender: AnyObject) {
+        navigationController?.popToRootViewControllerAnimated(true)
+        try! FIRAuth.auth()!.signOut()
+    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Default", forIndexPath: indexPath)
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("Default", forIndexPath: indexPath)        
         cell.textLabel?.text = "conversation number \(indexPath.row)"
 
-
-        
         return cell
     }
     
@@ -54,7 +56,7 @@ class ConversationTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showConversation" {
-            if let row = tableView.indexPathForSelectedRow?.row {
+            if (tableView.indexPathForSelectedRow?.row) != nil {
                 let conversation = Conversation()
                 let conversationViewController = segue.destinationViewController as! ConversationViewController
                 conversationViewController.conversation = conversation
