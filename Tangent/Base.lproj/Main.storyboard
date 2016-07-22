@@ -77,6 +77,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="emailField" destination="9ps-FO-ZnL" id="fJa-zy-2FE"/>
+                        <outlet property="loginButton" destination="1k8-2u-mad" id="1ee-l9-WHd"/>
                         <outlet property="passwordField" destination="3SE-HY-yJ7" id="jXs-Yg-oT7"/>
                         <segue destination="DoC-lp-qey" kind="show" identifier="toConversationTableView" id="VXf-HA-vZZ"/>
                     </connections>
@@ -286,6 +287,7 @@
                         <outlet property="firstNameField" destination="ZJF-HI-nBa" id="TqW-HP-MXB"/>
                         <outlet property="lastNameField" destination="VKe-Yi-lt9" id="PLb-4L-ZeT"/>
                         <outlet property="passwordField" destination="6hf-yO-JXb" id="H3F-Bk-blo"/>
+                        <outlet property="signUpButton" destination="AGQ-SX-cn9" id="I70-Lq-IYB"/>
                         <segue destination="DoC-lp-qey" kind="show" identifier="toConversationTableView" id="wuS-8M-vLm"/>
                     </connections>
                 </viewController>

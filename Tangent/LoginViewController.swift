@@ -14,12 +14,15 @@ class LoginViewController: UIViewController, UIAlertViewDelegate, UITextFieldDel
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet var loginButton: UIButton!
     
     @IBAction func handleLogin(sender: AnyObject) {
+        loginButton.enabled = false
         FIRAuth.auth()?.signInWithEmail(emailField.text!, password: passwordField.text!, completion: {
             user, error in
             
             if let error = error { //If error isn't nil, then login didn't work
+                self.loginButton.enabled = true
                 let alert = UIAlertController(title: "Alert", message: error.localizedDescription, preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)

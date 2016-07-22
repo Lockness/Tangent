@@ -18,12 +18,14 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var emailField: UITextField!
     @IBOutlet var confirmEmailField: UITextField!
     @IBOutlet var passwordField: UITextField!
+    @IBOutlet var signUpButton: UIButton!
     
     var validPassword: Bool = false
     var validEmail: Bool = false
     var confirmedEmail: Bool = false
     
     @IBAction func handleSignUp(sender: AnyObject) {
+        self.signUpButton.enabled = false
         validateFields()
         
         if (!validPassword || !validEmail || !confirmedEmail) {
@@ -35,6 +37,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             
             if let error = error {
                 print(error.localizedDescription)
+                self.signUpButton.enabled = true
             } else {
                 self.performSegueWithIdentifier("toConversationTableView", sender: self)
             }
