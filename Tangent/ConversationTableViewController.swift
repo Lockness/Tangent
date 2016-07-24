@@ -12,7 +12,7 @@ import FirebaseAuth
 
 class ConversationTableViewController: UITableViewController {
     
-    var messageRef = FIRDatabase.database().reference().child("Branches/B1/Messages")
+    var conversationRef = FIRDatabase.database().reference()
     var userRef = FIRAuth.auth()
     var messageCount = 0
     //var user: FIRUser?
@@ -36,14 +36,17 @@ class ConversationTableViewController: UITableViewController {
     }
     
     @IBAction func addNewConversation(sender: AnyObject) {
-        conversationList.append("convo " + String(conversationList.count))
+        //conversationList.append("convo " + String(conversationList.count))
         
-        // Update Table Data
-        tableView.beginUpdates()
-        tableView.insertRowsAtIndexPaths(
-            [NSIndexPath(forRow: conversationList.count-1, inSection: 0)
-            ], withRowAnimation: .Right)
-        tableView.endUpdates()
+//        // Update Table Data
+//        tableView.beginUpdates()
+//        tableView.insertRowsAtIndexPaths(
+//            [NSIndexPath(forRow: conversationList.count-1, inSection: 0)
+//            ], withRowAnimation: .Right)
+//        tableView.endUpdates()
+        
+        // Update Database
+        self.conversationRef.child("Conversations").child("C" + String(conversationList.count + 1)).setValue("")
     }
 
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -56,6 +59,8 @@ class ConversationTableViewController: UITableViewController {
             conversationList.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
             tableView.endUpdates()
+            print(indexPath.row) // delete C2 = row 1
+            conversationRef.child("Conversations/C" + String(indexPath.row + 1)).removeValue()
         }
     }
     
@@ -64,8 +69,9 @@ class ConversationTableViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
-        _ = messageRef.observeEventType(FIRDataEventType.ChildAdded, withBlock: { (snapshot) in
-            self.conversationList.append(snapshot.key + ": " + String(snapshot.value))
+        _ = conversationRef.child("Conversations").observeEventType(FIRDataEventType.ChildAdded, withBlock: { (snapshot) in
+            print(snapshot.key)
+            self.conversationList.append(snapshot.key)
             self.tableView.beginUpdates()
             self.tableView.insertRowsAtIndexPaths(
                 [NSIndexPath(forRow: self.conversationList.count-1, inSection: 0)
