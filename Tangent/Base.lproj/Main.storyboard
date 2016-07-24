@@ -328,7 +328,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Nt0-8o-Ifx">
                             <connections>
-                                <segue destination="Tec-lw-DBN" kind="show" identifier="showNewConversation" id="bnM-Ft-BKr"/>
+                                <action selector="addNewConversation:" destination="DoC-lp-qey" id="meH-0Z-wKe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

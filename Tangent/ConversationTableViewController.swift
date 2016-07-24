@@ -16,20 +16,46 @@ class ConversationTableViewController: UITableViewController {
     var userRef = FIRAuth.auth()
     //var user: FIRUser?
     
+    var conversationList = ["convo 0", "convo 1", "convo 2"]
+    
     @IBAction func logout(sender: AnyObject) {
         navigationController?.popToRootViewControllerAnimated(true)
         try! FIRAuth.auth()!.signOut()
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return conversationList.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Default", forIndexPath: indexPath)        
-        cell.textLabel?.text = "conversation number \(indexPath.row)"
+        cell.textLabel?.text = conversationList[indexPath.row]
 
         return cell
+    }
+    
+    @IBAction func addNewConversation(sender: AnyObject) {
+        conversationList.append("convo " + String(conversationList.count))
+        
+        // Update Table Data
+        tableView.beginUpdates()
+        tableView.insertRowsAtIndexPaths(
+            [NSIndexPath(forRow: conversationList.count-1, inSection: 0)
+            ], withRowAnimation: .Right)
+        tableView.endUpdates()
+    }
+
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            tableView.beginUpdates()
+            conversationList.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            tableView.endUpdates()
+        }
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
