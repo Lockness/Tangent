@@ -64,10 +64,6 @@ class ConversationTableViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(animated: Bool) {
         _ = messageRef.observeEventType(FIRDataEventType.ChildAdded, withBlock: { (snapshot) in
             self.conversationList.append(snapshot.key + ": " + String(snapshot.value))
             self.tableView.beginUpdates()
@@ -76,7 +72,12 @@ class ConversationTableViewController: UITableViewController {
                 ], withRowAnimation: .Right)
             self.tableView.endUpdates()
         })
+        
+        super.viewDidLoad()
+    }
     
+    override func viewWillAppear(animated: Bool) {
+
         self.navigationController?.navigationBarHidden = false
     }
     
