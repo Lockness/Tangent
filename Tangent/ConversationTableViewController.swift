@@ -14,9 +14,10 @@ class ConversationTableViewController: UITableViewController {
     
     var messageRef = FIRDatabase.database().reference().child("Branches/B1/Messages")
     var userRef = FIRAuth.auth()
+    var messageCount = 0
     //var user: FIRUser?
     
-    var conversationList = ["convo 0", "convo 1", "convo 2"]
+    var conversationList = [String]()
     
     @IBAction func logout(sender: AnyObject) {
         navigationController?.popToRootViewControllerAnimated(true)
@@ -53,7 +54,7 @@ class ConversationTableViewController: UITableViewController {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             tableView.beginUpdates()
             conversationList.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
             tableView.endUpdates()
         }
     }
@@ -64,15 +65,18 @@ class ConversationTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        _ = messageRef.observeEventType(FIRDataEventType.ChildAdded, withBlock: { (snapshot) in
-            print(snapshot.key)
-            // ...
-        })
-        
     }
     
     override func viewWillAppear(animated: Bool) {
+        _ = messageRef.observeEventType(FIRDataEventType.ChildAdded, withBlock: { (snapshot) in
+            self.conversationList.append(snapshot.key + ": " + String(snapshot.value))
+            self.tableView.beginUpdates()
+            self.tableView.insertRowsAtIndexPaths(
+                [NSIndexPath(forRow: self.conversationList.count-1, inSection: 0)
+                ], withRowAnimation: .Right)
+            self.tableView.endUpdates()
+        })
+    
         self.navigationController?.navigationBarHidden = false
     }
     
