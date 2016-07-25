@@ -2,7 +2,7 @@
 //  MainViewController.swift
 //  Tangent
 //
-//  Created by Justin Carruthers on 7/12/16.
+//  Created by Justin Carruthers and Ryan Tomlinson.
 //  Copyright © 2016 Lockness. All rights reserved.
 //
 
@@ -46,7 +46,7 @@ class ConversationTableViewController: UITableViewController {
 //        tableView.endUpdates()
         
         // Update Database
-        self.conversationRef.child("Conversations").child("C" + String(conversationList.count + 1)).setValue("")
+        self.conversationRef.child("Conversations").childByAutoId().setValue("new convo")
     }
 
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -55,12 +55,14 @@ class ConversationTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            if let conversationUuid = tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text {
+                print(conversationUuid)
+                conversationRef.child("Conversations/" + conversationUuid).removeValue()
+            }
             tableView.beginUpdates()
             conversationList.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
             tableView.endUpdates()
-            print(indexPath.row) // delete C2 = row 1
-            conversationRef.child("Conversations/C" + String(indexPath.row + 1)).removeValue()
         }
     }
     
@@ -78,6 +80,19 @@ class ConversationTableViewController: UITableViewController {
                 ], withRowAnimation: .Right)
             self.tableView.endUpdates()
         })
+
+        // Technically don't need this because you should never delete a convo from the database
+        // For example: If user A deletes a chat with user B, user B should still be able to see that chat
+        // AKA don't use this method
+        
+//        _ = conversationRef.child("Conversations").observeEventType(FIRDataEventType.ChildRemoved, withBlock: { (snapshot) in
+//            print(snapshot.key)
+//            self.conversationList.removeAtIndex(self.conversationList.indexOf(String(snapshot.key))!)
+//            print(self.conversationList)
+//            self.tableView.beginUpdates()
+//            self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+//            self.tableView.endUpdates()
+//        })
         
         super.viewDidLoad()
     }
