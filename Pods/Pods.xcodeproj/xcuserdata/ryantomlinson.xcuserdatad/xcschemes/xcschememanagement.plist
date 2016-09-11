@@ -6,25 +6,18 @@
 	<dict>
 		<key>Navajo-Swift.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Tangent.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>706BAF5FAD0AC9D497DF09BD630E7FAA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>995BAF5FAC8958D402AFF4B07EBDACAF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

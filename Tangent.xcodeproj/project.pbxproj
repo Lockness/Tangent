@@ -22,6 +22,7 @@
 		D48F4EC61D14AA720080C485 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48F4EC51D14AA720080C485 /* FirstScreenViewController.swift */; };
 		D48F4ECB1D14AA720080C485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48F4ECA1D14AA720080C485 /* Assets.xcassets */; };
 		D48F4ECE1D14AA720080C485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48F4ECC1D14AA720080C485 /* LaunchScreen.storyboard */; };
+		D494292F1D45182900EED4C1 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D494292E1D45182900EED4C1 /* NewConversationViewController.swift */; };
 		D49BB6AB1D3845AE006DB76B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D49BB6AA1D3845AE006DB76B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		D48F4ECA1D14AA720080C485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D48F4ECD1D14AA720080C485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D48F4ECF1D14AA720080C485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D494292E1D45182900EED4C1 /* NewConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		D49BB6AA1D3845AE006DB76B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,12 +75,13 @@
 		163C76A01D369A9A0065E726 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D48F4EC51D14AA720080C485 /* FirstScreenViewController.swift */,
-				16786A471D3559FC00BD86BF /* LoginViewController.swift */,
-				16786A491D355A0500BD86BF /* SignUpViewController.swift */,
+				163C76AA1D36AFF30065E726 /* BranchesViewController.swift */,
 				163C76991D35EDB80065E726 /* ConversationTableViewController.swift */,
 				163C76A71D369C260065E726 /* ConversationViewController.swift */,
-				163C76AA1D36AFF30065E726 /* BranchesViewController.swift */,
+				D48F4EC51D14AA720080C485 /* FirstScreenViewController.swift */,
+				16786A471D3559FC00BD86BF /* LoginViewController.swift */,
+				D494292E1D45182900EED4C1 /* NewConversationViewController.swift */,
+				16786A491D355A0500BD86BF /* SignUpViewController.swift */,
 				16E43E001D3ACB0F0055FE3D /* UserProfileViewController.swift */,
 			);
 			name = "View Controllers";
@@ -177,7 +180,7 @@
 				TargetAttributes = {
 					D48F4EBF1D14AA720080C485 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = VYQ93YPW29;
+						DevelopmentTeam = E9UEF82FNZ;
 					};
 				};
 			};
@@ -272,6 +275,7 @@
 				163C76A81D369C260065E726 /* ConversationViewController.swift in Sources */,
 				16786A481D3559FC00BD86BF /* LoginViewController.swift in Sources */,
 				D48F4EC61D14AA720080C485 /* FirstScreenViewController.swift in Sources */,
+				D494292F1D45182900EED4C1 /* NewConversationViewController.swift in Sources */,
 				16786A4A1D355A0500BD86BF /* SignUpViewController.swift in Sources */,
 				D48F4EC41D14AA720080C485 /* AppDelegate.swift in Sources */,
 				163C769A1D35EDB80065E726 /* ConversationTableViewController.swift in Sources */,
@@ -394,7 +398,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Tangent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lockness.Tangent;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lockness.TangentMessaging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -409,7 +413,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Tangent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lockness.Tangent;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lockness.TangentMessaging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
